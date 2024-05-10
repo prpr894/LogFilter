@@ -348,7 +348,7 @@ public class LogFilterMain extends JFrame implements INotiEvent
         {
             Properties p = new Properties();
             
-            // ini ÆÄÀÏ ÀĞ±â
+            // è¯»å–iniæ–‡ä»¶
             p.load(new FileInputStream(INI_FILE_CMD));
             
             T.d("p.getProperty(INI_CMD_COUNT) = " + p.getProperty(INI_CMD_COUNT));
@@ -440,10 +440,10 @@ public class LogFilterMain extends JFrame implements INotiEvent
         {
             Properties p = new Properties();
             
-            // ini ÆÄÀÏ ÀĞ±â
+            // è¯»å–iniæ–‡ä»¶
             p.load(new FileInputStream(INI_FILE));
             
-            // Key °ª ÀĞ±â
+            // è¯»å–é”®å€¼
             String strFontType = p.getProperty(INI_FONT_TYPE);
             if(strFontType != null && strFontType.length() > 0)
                 m_jcFontType.setSelectedItem(p.getProperty(INI_FONT_TYPE));
@@ -516,45 +516,45 @@ public class LogFilterMain extends JFrame implements INotiEvent
     {
         addDesc(VERSION);
         addDesc("");
-        addDesc("Version 1.8 : java -jar LogFilter_xx.jar [filename] Ãß°¡");
-        addDesc("Version 1.7 : copy½Ã º¸ÀÌ´Â column¸¸ clipboard¿¡ º¹»ç(Line Á¦¿Ü)");
-        addDesc("Version 1.6 : cmdÄŞº¸¹Ú½º ±æÀÌ °íÁ¤");
-        addDesc("Version 1.5 : Highlight color listÃß°¡()");
-        addDesc("   - LogFilterColor.ini ¿¡ Ä«¿îÆ®¿Í °ª ³Ö¾î ÁÖ½Ã¸é µË´Ï´Ù.");
-        addDesc("   - ex)INI_HIGILIGHT_COUNT=2");
-        addDesc("   -    INI_COLOR_HIGILIGHT_0=0xFFFF");
-        addDesc("   -    INI_COLOR_HIGILIGHT_1=0x00FF");
-        addDesc("Version 1.4 : Ã¢Å©±â ÀúÀå");
-        addDesc("Version 1.3 : recent file ¹× open¸Ş´ºÃß°¡");
-        addDesc("Version 1.2 : Tid ÇÊÅÍ Ãß°¡");
-        addDesc("Version 1.1 : Level F Ãß°¡");
-        addDesc("Version 1.0 : Pid filter Ãß°¡");
-        addDesc("Version 0.9 : Font type Ãß°¡");
-        addDesc("Version 0.8 : ÇÊÅÍÃ¼Å© ¹Ú½º Ãß°¡");
-        addDesc("Version 0.7 : Ä¿³Î·Î±× ÆÄ½Ì/LogFilter.ini¿¡ ÄÃ·¯Á¤ÀÇ(0~7)");
-        addDesc("Version 0.6 : ÇÊÅÍ ´ë¼Ò¹® ¹«½Ã");
-        addDesc("Version 0.5 : ¸í·É¾î iniÆÄÀÏ·Î ÀúÀå");
-        addDesc("Version 0.4 : add thread option, filter ÀúÀå");
-        addDesc("Version 0.3 : ´Ü¸» ¼±ÅÃ ¾ÈµÇ´Â ¹®Á¦ ¼öÁ¤");
+        addDesc("ç‰ˆæœ¬ 1.8 : æ·»åŠ  java -jar LogFilter_xx.jar [æ–‡ä»¶å]");
+        addDesc("1.7ç‰ˆæœ¬ï¼šå¤åˆ¶æ—¶ï¼Œä»…å°†å¯è§åˆ—å¤åˆ¶åˆ°å‰ªè´´æ¿ï¼ˆä¸åŒ…æ‹¬è¡Œï¼‰");
+        addDesc("ç‰ˆæœ¬ 1.6: cmd ç»„åˆæ¡†é•¿åº¦å›ºå®š");
+        addDesc("ç‰ˆæœ¬1.5ï¼šæ·»åŠ é«˜äº®é¢œè‰²åˆ—è¡¨()");
+        addDesc(" - åªéœ€åœ¨ LogFilterColor.ini ä¸­è¾“å…¥è®¡æ•°å’Œå€¼å³å¯ã€‚");
+        addDesc(" - ex)INI_HIGILIGHT_COUNT=2");
+        addDesc("-INI_COLOR_HIGILIGHT_0=0xFFFF");
+        addDesc("-INI_COLOR_HIGILIGHT_1=0x00FF");
+        addDesc("ç‰ˆæœ¬1.4ï¼šä¿å­˜çª—å£å¤§å°");
+        addDesc("ç‰ˆæœ¬1.3ï¼šæ·»åŠ æœ€è¿‘çš„æ–‡ä»¶å¹¶æ‰“å¼€èœå•");
+        addDesc("ç‰ˆæœ¬ 1.2ï¼šæ·»åŠ äº† Tid è¿‡æ»¤å™¨");
+        addDesc("ç‰ˆæœ¬ 1.1ï¼šæ·»åŠ äº† F çº§");
+        addDesc("ç‰ˆæœ¬1.0ï¼šæ·»åŠ Pidè¿‡æ»¤å™¨");
+        addDesc("ç‰ˆæœ¬0.9ï¼šæ·»åŠ å­—ä½“ç±»å‹");
+        addDesc("ç‰ˆæœ¬ 0.8ï¼šæ·»åŠ è¿‡æ»¤å™¨å¤é€‰æ¡†");
+        addDesc("0.7ç‰ˆæœ¬ï¼šLogFilter.ini(0~7)ä¸­çš„å†…æ ¸æ—¥å¿—è§£æ/é¢œè‰²å®šä¹‰");
+        addDesc("ç‰ˆæœ¬ 0.6: å¿½ç•¥è¿‡æ»¤å™¨å¤§å°å†™");
+        addDesc("ç‰ˆæœ¬ 0.5: å°†å‘½ä»¤ä¿å­˜ä¸º ini æ–‡ä»¶");
+        addDesc("ç‰ˆæœ¬0.4ï¼šæ·»åŠ çº¿ç¨‹é€‰é¡¹ï¼Œä¿å­˜è¿‡æ»¤å™¨");
+        addDesc("0.3ç‰ˆæœ¬ï¼šä¿®å¤æ— æ³•é€‰æ‹©ç»ˆç«¯çš„é—®é¢˜");
         addDesc("");
-        addDesc("[Tag]");
-        addDesc("Alt+L/R Click : Show/Remove tag");
+        addDesc("[æ ‡ç­¾]");
+        addDesc("Alt+L/R å•å‡»ï¼šæ˜¾ç¤º/åˆ é™¤æ ‡ç­¾");
         addDesc("");
-        addDesc("[Bookmark]");
-        addDesc("Ctrl+F2/double click: bookmark toggle");
-        addDesc("F2 : pre bookmark");
-        addDesc("F3 : next bookmark");
+        addDesc("[ä¹¦ç­¾]");
+        addDesc("Ctrl+F2/åŒå‡»ï¼šä¹¦ç­¾åˆ‡æ¢");
+        addDesc("F2ï¼šé¢„ä¹¦ç­¾");
+        addDesc("F3ï¼šä¸‹ä¸€ä¸ªä¹¦ç­¾");
         addDesc("");
-        addDesc("[Copy]");
-        addDesc("Ctrl+c : row copy");
-        addDesc("right click : cloumn copy");
+        addDesc("[å¤åˆ¶]");
+        addDesc("Ctrl+c : è¡Œå¤åˆ¶");
+        addDesc("å³é”®å•å‡»ï¼šåˆ—å¤åˆ¶");
         addDesc("");
-        addDesc("[New version]");
+        addDesc("[æ–°ç‰ˆæœ¬]");
         addDesc("http://blog.naver.com/iookill/140135139931");
     }
 
     /**
-     * @param nIndex    ½ÇÁ¦ ¸®½ºÆ®ÀÇ ÀÎµ¦½º
+     * @param nIndex    å®é™…åˆ—è¡¨çš„ç´¢å¼•
      * @param nLine     m_strLine
      * @param bBookmark
      */
@@ -1259,11 +1259,11 @@ public class LogFilterMain extends JFrame implements INotiEvent
                 strCommand = (String)m_comboDeviceCmd.getSelectedItem();
             Process oProcess = Runtime.getRuntime().exec(strCommand);
 
-            // ¿ÜºÎ ÇÁ·Î±×·¥ Ãâ·Â ÀĞ±â
+            // è¯»å–å¤–éƒ¨ç¨‹åºè¾“å‡º
             BufferedReader stdOut   = new BufferedReader(new InputStreamReader(oProcess.getInputStream()));
             BufferedReader stdError = new BufferedReader(new InputStreamReader(oProcess.getErrorStream()));
 
-            // "Ç¥ÁØ Ãâ·Â"°ú "Ç¥ÁØ ¿¡·¯ Ãâ·Â"À» Ãâ·Â
+            // æ‰“å°â€œæ ‡å‡†è¾“å‡ºâ€å’Œâ€œæ ‡å‡†é”™è¯¯è¾“å‡ºâ€
             while ((s =   stdOut.readLine()) != null)
             {
                 if(!s.equals("List of devices attached "))
@@ -1278,7 +1278,7 @@ public class LogFilterMain extends JFrame implements INotiEvent
                 listModel.addElement(s);
             }
 
-            // ¿ÜºÎ ÇÁ·Î±×·¥ ¹İÈ¯°ª Ãâ·Â (ÀÌ ºÎºĞÀº ÇÊ¼ö°¡ ¾Æ´Ô)
+            // è¾“å‡ºå¤–éƒ¨ç¨‹åºè¿”å›å€¼ï¼ˆè¿™éƒ¨åˆ†ä¸æ˜¯å¿…é¡»çš„ï¼‰
             System.out.println("Exit Code: " + oProcess.exitValue());
         }
         catch(Exception e)
